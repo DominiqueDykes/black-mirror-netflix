@@ -1292,9 +1292,6 @@
                 <a href="#trailer" class="navbar-item-link">Trailer</a>
               </li>
               <li class="navbar-item">
-                <a href="#actor" class="navbar-item-link">Actors</a>
-              </li>
-              <li class="navbar-item">
                 <a href="#award" class="navbar-item-link">Awards</a>
               </li>
             </ul>
@@ -1317,22 +1314,15 @@
                 class="social-icon-link"
                 href="mailto:nique.dykes@gmail.com"
                 target="_blank"
-                title="Email Elham"
+                title="Dominique Dykes"
                 ><i class="fa-regular fa-envelope"></i
-              ></a>
-              <a
-                class="social-icon-link"
-                href="https://t.me/eli_est"
-                target="_blank"
-                title="Telegram"
-                ><i class="fa-brands fa-telegram"></i
               ></a>
             </div>
           </div>
         </nav>
       </header>
 
-      <!---- social link ---->
+     
       <div class="social-link-bar">
         <div class="vertical-line"></div>
         <ul>
@@ -1356,7 +1346,7 @@
             <a
               href="mailto:nique.dykes@gmail.com"
               target="_blank"
-              title="Email Elham"
+              title="Dominique Dykes"
               ><i class="fa-regular fa-envelope"></i
             ></a>
           </li>
@@ -1364,7 +1354,7 @@
         <div class="vertical-line"></div>
       </div>
 
-      <!---- hero ---->
+      
       <section class="hero-wrap">
         <div class="hero-container">
           <div class="hero">
@@ -1444,7 +1434,7 @@
         </div>
       </section>
 
-      <!---- gallery ---->
+    
       <section class="gallery-wrap" id="gallery">
 
 
@@ -1538,9 +1528,9 @@
         </span>
       </section>
 
-      <!---- trailer ---->
+      
       <section class="trailer-wrap" id="trailer">
-        <!-- <h2>Trailer</h2>-->
+    
 
         <div class="trailer-container">
             <iframe 
@@ -1876,7 +1866,6 @@
         </div>
       </div>
 
-      <!-- footer -->
       <footer>
         <div class="footer-wrap">
           <div class="footer-container">
@@ -2052,10 +2041,10 @@
     </div>
 
     <script>
-      //it should execute at first load, bz when I'm in the middle of the page and we refresh the page, the menu.sticky isn'i added to the navbar
+    
       addStickyClassToHeader();
 
-      /*---- Carousel ----*/
+    
       function initializeCarousel(
         carouselId,
         leftIconId,
@@ -2074,11 +2063,11 @@
           mouseDragDistance;
 
         function dragStart(event) {
-          //occured on mousedown
+     
           isDragStart = true;
-          //used to store the previous X-coordinate of the mouse pointer or touch event when the drag starts.
+          
           initialDragX = event.pageX || event.touches[0].pageX;
-          //used to store the current horizontal scroll position of the carouselElement when the drag starts. initialScrollLeft
+         
           initialHorizontalScrollPosition = carouselElement.scrollLeft;
         }
 
@@ -2106,15 +2095,13 @@
         /*----*/
 
         function dragCarousel(event) {
-          //occured when mousemove
-
-          // scrolling images to left according to mouse pointer
+          
           if (!isDragStart) return;
           event.preventDefault();
           isDragging = true;
           carouselElement.classList.add("dragging");
 
-          //Where the mouse is now on the screen minus where the drag started.
+
           mouseDragDistance =
             (event.pageX || event.touches[0].pageX) - initialDragX;
 
@@ -2124,13 +2111,7 @@
         }
 
         function autoSlide() {
-          //bz of: if there is no img left then it start scrolling back
-          //carouselElement.scrollWidth:
-          //// returns the total width of the scrollable content of the carouselElement,
-          //// including any content that overflows beyond the element's visible width.
-          //carouselElement.clientWidth:
-          //// returns the visible width of the carouselElement, which is the width of the element's content area excluding any vertical scrollbar (if present) and padding.
-          let maxScrollableWidth =
+          
             carouselElement.scrollWidth - carouselElement.clientWidth;
           if (carouselElement.scrollLeft == maxScrollableWidth) return;
 
@@ -2140,14 +2121,14 @@
           //getting difference value that needs to add or reduce from carousel left to take middle img center
           let valDifference = oneImageWidth - mouseDragDistance;
 
-          //user scrolling to the right
+         
           if (carouselElement.scrollLeft > initialHorizontalScrollPosition) {
             return (carouselElement.scrollLeft +=
               mouseDragDistance > oneImageWidth / 3
                 ? valDifference
                 : mouseDragDistance);
           }
-          //user scrolling to the left
+         
           carouselElement.scrollLeft -=
             mouseDragDistance > oneImageWidth / 3
               ? valDifference
@@ -2155,7 +2136,7 @@
         }
 
         function dragStop() {
-          //occured when mouseup or mouseleave
+      
           isDragStart = false;
           carouselElement.classList.remove("dragging");
 
@@ -2173,7 +2154,7 @@
         carouselElement.addEventListener("mouseleave", dragStop);
       }
 
-      // Call the function with the appropriate arguments for each carousel
+
       const firstImageElement = document
         .getElementById("gallery-carousel")
         .getElementsByTagName("img")[0];
@@ -2187,12 +2168,7 @@
         15,
       );
 
-      /*
-const firstCardElement = document
-  .getElementById("actor-carousel")
-  .getElementsByClassName("actor-card")[0];
-const firstCardWidth = firstCardElement.width;
-*/
+
       initializeCarousel(
         "actor-carousel",
         "actor-left-icon",
@@ -2201,7 +2177,7 @@ const firstCardWidth = firstCardElement.width;
         20,
       );
 
-      /*---- navbar menu ----*/
+  
       const navLinksElement = document.querySelectorAll(".navbar-item-link");
       const homepageElement = document.getElementById("homepage");
       const hamburgerElement = document.querySelector("#hamburger");
@@ -2223,7 +2199,7 @@ const firstCardWidth = firstCardElement.width;
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
-      /*---- Hamburger ----*/
+
 
       hamburgerElement.addEventListener("click", () => {
         hamburgerElement.classList.toggle("active");
@@ -2237,13 +2213,12 @@ const firstCardWidth = firstCardElement.width;
         }),
       );
 
-      /*---- sticky menu ----*/
       function addStickyClassToHeader() {
         let header = document.getElementById("navbar");
         header.classList.toggle("sticky", window.scrollY > 0);
       }
 
-      /*---- Active menu link by window scroll----*/
+     
 
       const sections = document.querySelectorAll("section");
 
@@ -2251,7 +2226,7 @@ const firstCardWidth = firstCardElement.width;
         //const  = window.scrollY;
         const currentScrollPosition = window.pageYOffset;
 
-        // Loop through each section and check if it is in view
+    
         sections.forEach((section, index) => {
           const sectionTop = section.offsetTop - 250;
           const sectionHeight = section.offsetHeight;
@@ -2260,11 +2235,11 @@ const firstCardWidth = firstCardElement.width;
             currentScrollPosition >= sectionTop &&
             currentScrollPosition < sectionTop + sectionHeight
           ) {
-            // If the section is in view, add the "active-navbar-item-link" class to the corresponding menu link
+
             navLinksElement.forEach((link) => {
               link.classList.remove("active-by-scroll");
             });
-            //console.log(navLinksElement[index]);
+ 
             navLinksElement[index].classList.add("active-by-scroll");
           }
         });
@@ -2274,8 +2249,6 @@ const firstCardWidth = firstCardElement.width;
         addStickyClassToHeader();
         findTargetByWindowScroll();
       });
-
-      /*---- footer ----*/
 
       const submitElement = document.querySelector("#submit");
 
