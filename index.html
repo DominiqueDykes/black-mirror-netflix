@@ -15,7 +15,6 @@
       src="https://kit.fontawesome.com/7d78062c9c.js"
       crossorigin="anonymous"
     ></script>
-    <!---- favicon ---->
     <link
       rel="icon"
       type="image/png"
@@ -29,7 +28,7 @@
       :root {
         --main-color: #990707;
         --dark-color: #011415;
-        --gray-color: #aaadae; /*rgb(170, 173, 174)*/
+        --gray-color: #aaadae; 
         --azure-color: azure;
       }
       * {
@@ -38,7 +37,7 @@
       }
 
       body {
-        min-height: 100vh; /*man 100vh gozashte boodam*/
+        min-height: 100vh;
         font-family: "Open Sans", sans-serif;
         min-width: 320px;
       }
@@ -67,7 +66,7 @@
         position: relative;
       }
 
-      /*=====================*/
+    
 
       .hero-wrap {
         color: azure;
@@ -76,7 +75,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /*height: 100vh;*/ /*I comment this*/
+
       }
 
       .hero-container::before {
@@ -204,7 +203,7 @@
         font-size: 12px;
       }
 
-      /*=====================*/
+      
 
       .navbar {
         position: fixed;
@@ -234,9 +233,7 @@
       }
 
       .navbar .navbar-logo {
-        /* background-image: url("/img/logo.svg");
-        background-size: contain;
-        background-repeat: no-repeat; */
+       
         width: 250px;
         height: 50px;
       }
@@ -319,7 +316,7 @@
         transform: scale(1.3);
       }
 
-      /*=====================*/
+ 
 
       .social-link-bar {
         position: fixed;
@@ -355,7 +352,7 @@
         color: var(--main-color);
       }
 
-      /*=====================*/
+    
 
       .gallery-wrap {
         position: relative;
@@ -364,16 +361,11 @@
         user-select: none;
       }
 
-      /*
-.
-  margin-bottom: 30px;
-}*/
 
       .gallery-wrap .switch-left i,
       .gallery-wrap .switch-right i {
         position: absolute;
-        top: 50%; /*60%;*/
-        /*transform: translateY(-50%);*/
+        top: 50%; 
         width: 35px;
         height: 35px;
         font-size: 19px;
@@ -435,7 +427,7 @@
         z-index: 5;
       }
 
-      /*=====================*/
+     
 
       .footer-wrap {
         background-color: var(--dark-color);
@@ -539,7 +531,7 @@
         margin: 0 5px 0;
       }
 
-      /*========== Actor ===========*/
+
 
       .actor-wrap {
         margin: 40px 100px;
@@ -640,7 +632,7 @@
         border-radius: 50%;
       }
 
-      /*==== Trailer ====*/
+    
 
       .trailer-wrap {
         margin: 40px 0 30px;
@@ -652,32 +644,7 @@
         );
       }
 
-      /*
-.trailer-wrap h2 {
-  color: var(--main-color);
-  margin: 0;
-  margin-bottom: 30px;
-}*/
-
-      .trailer-container {
-        margin: 30px auto 10px;
-        width: 78%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-
-      .trailer-container iframe {
-        max-width: 500px;
-        height: 315px;
-        width: 560px;
-        border-radius: 5px;
-        padding-right: 50px;
-        user-select: none;
-      }
-
-      /*==== Quotes ====*/
+      
 
       .quote {
         font-size: 13px;
@@ -1165,7 +1132,7 @@
   </head>
   <body>
     <div class="body-wrapper">
-      <!----- menu ----->
+     
       <header>
         <nav class="navbar" id="navbar">
           <a href="/#" title="Homepage" id="homepage" class="navbar-logo">
@@ -1361,9 +1328,9 @@
             <div class="detail">
              British · Sci-Fi TV · TV Thrillers · Drama | Six Seasons | 2011-2023 | 18+
             </div>
-            <h1>Twisted tales run wild</h1>
+            <h1>Twisted Tales Run Wild</h1>
             <div class="plot">
-            Twisted tales run wild in this mind-bending anthology series that reveals humanity's worst traits, greatest innovations and more. 
+                Featuring stand-alone dramas -- sharp, suspenseful, satirical tales that explore techno-paranoia -- "Black Mirror" is a contemporary reworking of "The Twilight Zone" with stories that tap into the collective unease about the modern world. Each story features its own cast of unique characters, including stars like Bryce Dallas Howard ("The Help"), Alice Eve, Gugu Mbatha-Raw, Tom Cullen and Jerome Flynn ("Game of Thrones"). Joe Wright, Dan Trachtenberg, and James Watkins are among the featured directors. Twisted tales run wild in this mind-bending anthology series that reveals humanity's worst traits, greatest innovations and more. 
             </div>
             <div class="creator">
               <span class="creator-title">Creator: </span
@@ -1548,13 +1515,13 @@
             <div class="below-layer">
               <div class="upper-layer">
                 <div>
-                  <h3>Quotes</h3>
+                  <h3>Watch All You Want</h3>
                   <div class="quote-text" id="quote-text">
                     “Humans. You know we give ourselves rep, but we’re genuinely empathetic as a species. I mean, we don’t actually really want to kill each other, which is a good thing. Until your future depends on wiping out the enemy.”<br />– Arquette (Michael Kelly)
                   </div>
                 </div>
                 <div class="quote-info">
-                  <span class="quote-info-no" id="quote-info-no">(1/10)</span>
+                  <span class="quote-info-no" id="quote-info-no">(1)</span>
                   <span class="quote-info-next" id="quote-info-next"
                     ><i class="fa fa-arrow-right"></i
                   ></span>
@@ -2264,38 +2231,6 @@
         }
       });
 
-      /*--------*/
-
-      const funnyText = [
-        "Emotions can’t be allowed to interfere with what is right.<br/>(John Smith)",
-        "A man is only ever as strong as the people around him: The community he serves and the family he is sworn to protect. Whatever strength he has, he draws from them. And for them, he must be prepared to give everything.<br/>(John Smith)",
-        "People are capable of anything. Especially when they’re desperate.<br/>(Joe Blake)",
-        "We’ve seen things, you and me. Other worlds. Other lives. We have that in common. It’s unbearable. To be able to look through that door and glimpse all the people you could have been. And to know that out of all of them, this is the one you became.<br/>(John Smith)",
-        "This place and this world will not last if we don’t change it for the better. It’s only a matter of time; it will get worse.<br/>(Juliana Crain)",
-        "The only way to view the truth of life, is to stand apart from it, to see the consequence of every thought, every action. But still, we are bound by time and space, unable to steer our destiny.<br/>(Nobusuke Tagomi)",
-        "We all have flaws, all of us, every single one of us. It makes us who we are.<br/>(Juliana Crain)",
-        "The cultures we were born into mean that we do things differently. And yet I suspect that we also hold many of the same things in the highest esteem.<br/>(Nobusuke Tagomi)",
-        "You don’t need anybody to keep you down because you got your own little inner fascist right there telling you what you can and cannot do. That’s how you let them win.<br/>(Mark Sampson)",
-        "There comes a time when all men must bear the weight of their responsibility.<br/>(Inspector Kido)",
-        "It takes a lot of effort not to be free. I kept my head down for so long, I forgot what it feels like to stand up.<br/>(Frank Frink)",
-      ];
-      const quoteInfoNextElement = document.getElementById("quote-info-next");
-      quoteInfoNextElement.addEventListener("click", showQuote);
-      const quoteTextElement = document.getElementById("quote-text");
-      const quoteInfoNoElement = document.getElementById("quote-info-no");
-
-      let funnyTextIndex = 1;
-
-      function showQuote() {
-        if (funnyTextIndex === 10) {
-          funnyTextIndex = 0;
-        }
-        quoteTextElement.innerHTML = funnyText[funnyTextIndex];
-        //console.log(funnyTextIndex);
-        //console.log(`(${funnyTextIndex + 1}/5)`);
-        quoteInfoNoElement.textContent = `(${funnyTextIndex + 1}/10)`;
-        funnyTextIndex += 1;
-      }
 
       /*---- load more ----*/
       let loadMoreButtonElement = document.getElementById("load-more-button");
